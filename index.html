@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masterclass: promovarea medicilor online | MedB. by DIGITALUX</title>
+<meta name="description" content="Masterclass de marketing medical cu Iris Micu: cum își atrage un medic mai mulți pacienți prin brand personal, conținut și reclame. Înscrie-te gratuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#38b6ff;
+    --blue-soft:#7fd0ff;
+    --tint:#eaf6ff;
+    --navy:#0c2647;
+    --ink:#3e4a5c;
+    --white:#ffffff;
+    --line:#d3e9f8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{margin:0;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--navy);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--navy)}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+  .wrap{width:min(1120px,100% - 48px);margin-inline:auto}
+
+  /* Header */
+  .top{position:relative;z-index:2;padding:28px 0}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{display:inline-flex;flex-direction:column;text-decoration:none;line-height:1}
+  .logo b{font-size:40px;font-weight:800;letter-spacing:-0.02em;color:var(--blue)}
+  .logo small{margin-top:6px;font-size:11px;font-weight:600;letter-spacing:.18em;color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 28px;border-radius:999px;background:var(--navy);color:var(--white);font:inherit;font-weight:700;text-decoration:none;border:0;cursor:pointer}
+  .btn:hover{background:#163a66}
+  .btn-ghost{background:transparent;color:var(--navy);border:2px solid var(--blue)}
+  .btn-ghost:hover{background:var(--tint)}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;padding:56px 0 120px}
+  .hero::after{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:var(--blue);right:-180px;bottom:-260px;z-index:0}
+  .hero .wrap{position:relative;z-index:1}
+  .pill{display:inline-block;padding:8px 20px;border:2px solid var(--blue);border-radius:999px;font-weight:600;font-size:15px}
+  .hero h1{margin:28px 0 24px;font-size:clamp(44px,7.4vw,92px);line-height:1.02;font-weight:800;letter-spacing:-0.035em;max-width:13ch}
+  .hero h1 span{color:var(--blue)}
+  .hero p.lead{font-size:clamp(18px,2vw,22px);color:var(--ink);max-width:56ch;margin:0 0 36px}
+  .facts{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 40px;padding:0;list-style:none}
+  .facts li{background:var(--tint);border-radius:16px;padding:14px 20px;min-width:150px}
+  .facts small{display:block;font-size:13px;color:var(--ink)}
+  .facts strong{font-size:18px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+  /* Problem band */
+  .band{background:var(--blue);padding:96px 0}
+  .band h2{margin:0 0 20px;font-size:clamp(32px,4.6vw,56px);line-height:1.08;font-weight:800;letter-spacing:-0.03em;color:var(--white);max-width:16ch}
+  .band p{font-size:clamp(17px,1.8vw,20px);font-weight:500;max-width:60ch;margin:0}
+
+  /* Sections */
+  section.block{padding:96px 0}
+  .block h2{margin:0 0 12px;font-size:clamp(30px,4vw,48px);line-height:1.1;font-weight:800;letter-spacing:-0.03em}
+  .block .intro{color:var(--ink);font-size:18px;max-width:60ch;margin:0 0 48px}
+  .learn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 48px;margin:0;padding:0;list-style:none}
+  .learn li{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-top:2px solid var(--line)}
+  .tick{flex:none;width:32px;height:32px;border-radius:50%;background:var(--blue);display:grid;place-items:center;margin-top:2px}
+  .learn h3{margin:0 0 4px;font-size:19px;font-weight:700}
+  .learn p{margin:0;color:var(--ink)}
+
+  /* Speaker */
+  .speaker{background:var(--navy);color:var(--white);border-radius:32px;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,64px);align-items:center;position:relative;overflow:hidden}
+  .speaker::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:var(--blue);top:-130px;right:-90px;opacity:.9}
+  .years{font-size:clamp(88px,12vw,150px);font-weight:800;line-height:.9;color:var(--blue);letter-spacing:-0.04em}
+  .years small{display:block;font-size:17px;font-weight:600;color:var(--white);letter-spacing:0;margin-top:12px;line-height:1.4}
+  .speaker h2{color:var(--white);position:relative}
+  .speaker p{color:#c9d6e8;max-width:58ch;margin:0 0 16px;position:relative}
+  .clients{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none;position:relative}
+  .clients li{border:1.5px solid #2f4d75;border-radius:999px;padding:6px 16px;font-size:14px;font-weight:500}
+
+  /* Audience */
+  .audience{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .audience div{background:var(--tint);border-radius:24px;padding:28px}
+  .audience h3{margin:0 0 6px;font-size:20px;font-weight:700}
+  .audience p{margin:0;color:var(--ink)}
+
+  /* Form */
+  .signup{background:var(--tint);padding:96px 0}
+  .signup .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:start}
+  .signup h2{margin:0 0 16px;font-size:clamp(32px,4.4vw,52px);line-height:1.05;font-weight:800;letter-spacing:-0.03em}
+  .signup .side p{color:var(--ink);font-size:18px;margin:0 0 24px}
+  form{background:var(--white);border-radius:28px;padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field.full{grid-column:1 / -1}
+  label{font-size:15px;font-weight:600}
+  label .opt{font-weight:400;color:var(--ink)}
+  input,select,textarea{font:inherit;font-size:16px;color:var(--navy);background:var(--white);border:2px solid var(--line);border-radius:14px;padding:12px 14px;min-height:50px;width:100%}
+  textarea{min-height:110px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(56,182,255,.2)}
+  .consent{grid-column:1 / -1;display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink)}
+  .consent input{width:22px;height:22px;min-height:0;flex:none;margin-top:2px;accent-color:var(--navy)}
+  .consent label{font-weight:400}
+  form .btn{grid-column:1 / -1;min-height:56px;font-size:17px}
+  .err{grid-column:1 / -1;margin:0;color:#b3261e;font-weight:500;min-height:0}
+  .done{display:none;background:var(--white);border-radius:28px;padding:clamp(28px,4vw,48px)}
+  .done h3{margin:0 0 8px;font-size:28px;font-weight:800}
+  .done p{margin:0;color:var(--ink)}
+  .signup.sent form{display:none}
+  .signup.sent .done{display:block}
+
+  footer{padding:48px 0;background:var(--navy);color:#c9d6e8;font-size:15px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+  footer a{color:var(--white)}
+  footer .logo b{font-size:30px}
+  footer .logo small{color:#9fb3cc}
+
+  @media (max-width:860px){
+    .learn,.audience{grid-template-columns:1fr}
+    .speaker{grid-template-columns:1fr}
+    .signup .wrap{grid-template-columns:1fr}
+    form{grid-template-columns:1fr}
+    .hero{padding-bottom:180px}
+    .hero::after{width:380px;height:380px;right:-140px;bottom:-200px}
+  }
+  @media (max-width:520px){.top .btn{padding:10px 18px;font-size:14px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="MedB. by DIGITALUX, acasă"><b>MedB.</b><small>BY DIGITALUX®</small></a>
+    <a class="btn" href="#inscriere">Înscrie-te</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="pill">Masterclass de marketing medical cu Iris Micu</span>
+      <h1>Cabinetul tău <span>nu</span> ar trebui să fie gol niciodată.</h1>
+      <p class="lead">Un masterclass despre cum se promovează un medic online: cum devii medicul pe care pacienții îl caută, ce conținut construiește încredere și cum transformi vizibilitatea în programări.</p>
+      <ul class="facts">
+        <li><small>Data</small><strong>Marți, 20 octombrie</strong></li>
+        <li><small>Ora</small><strong>19:00</strong></li>
+        <li><small>Unde</small><strong>Online, pe Zoom</strong></li>
+        <li><small>Participare</small><strong>Gratuită</strong></li>
+      </ul>
+      <div class="hero-cta">
+        <a class="btn" href="#inscriere">Rezervă-mi locul</a>
+        <a class="btn btn-ghost" href="#program">Ce vei afla</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Majoritatea medicilor nu obțin rezultate din marketing.</h2>
+      <p>Problema nu e lipsa postărilor sau a reclamelor, ci lipsa unei strategii: comunicare fără o poziționare clară, fără un mesaj care să te diferențieze și fără un plan prin care pacienții ajung să aibă încredere în tine înainte să te sune.</p>
+    </div>
+  </section>
+
+  <section class="block" id="program">
+    <div class="wrap">
+      <h2>Ce vei afla la masterclass</h2>
+      <p class="intro">Discutăm concret, pe exemple din cabinete și clinici reale, nu teorie generală de marketing.</p>
+      <ul class="learn">
+        <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0c2647" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Poziționarea ta ca medic</h3><p>Cum alegi pentru ce vrei să fii cunoscut și cum spui asta astfel încât pacientul potrivit să se recunoască.</p></div></li>
+        <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0c2647" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Brandul personal</h3><p>De ce pacienții aleg un om, nu o firmă, și cum îți construiești o imagine în care se pot încrede.</p></div></li>
+        <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0c2647" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Conținutul care aduce pacienți</h3><p>Video-uri educative, explicații despre afecțiuni și tratamente: ce să filmezi, cât de des și pe ce platforme.</p></div></li>
+        <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0c2647" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Campanii pentru programări</h3><p>Cum transformi vizibilitatea în solicitări de consultații prin reclame pe Facebook, Instagram și TikTok.</p></div></li>
+        <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0c2647" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Greșelile care îți limitează creșterea</h3><p>Ce văd cel mai des la medicii care postează constant, dar nu primesc programări.</p></div></li>
+        <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0c2647" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Întrebări și răspunsuri</h3><p>Timp dedicat întrebărilor tale, pe situația cabinetului sau a clinicii în care lucrezi.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="speaker">
+        <div class="years">5+<small>ani de experiență<br>în marketing medical</small></div>
+        <div>
+          <h2>Cu Iris Micu</h2>
+          <p>Iris este fondatoarea agenției DIGITALUX și lucrează de peste 5 ani cu medici, clinici și branduri medicale pentru care reputația și încrederea sunt cele mai importante active.</p>
+          <p>Pentru Dr. Silviu Jebelean, medic chirurg ortoped, strategia de brand personal construită prin video-uri educative și campanii de programare aduce 63 de solicitări pe lună.</p>
+          <ul class="clients" aria-label="Clienți din domeniul medical">
+            <li>Dr. Silviu Jebelean</li>
+            <li>Dr. Costin Timofte</li>
+            <li>Dental Leo</li>
+            <li>Advanced Beauty</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <h2>Pentru cine este</h2>
+      <p class="intro">Pentru medicii care vor să fie aleși pentru expertiza lor, nu doar găsiți întâmplător.</p>
+      <div class="audience">
+        <div><h3>Medici cu cabinet propriu</h3><p>Care vor un flux constant de pacienți fără să depindă doar de recomandări.</p></div>
+        <div><h3>Medici în clinici</h3><p>Care vor să-și construiască un nume propriu și o bază de pacienți fideli.</p></div>
+        <div><h3>Clinici și echipe medicale</h3><p>Care vor ca medicii lor să fie vizibili și să inspire încredere online.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="signup" id="inscriere">
+    <div class="wrap">
+      <div class="side">
+        <h2>Rezervă-ți locul la masterclass</h2>
+        <p>Participarea este gratuită. Completează formularul și îți trimitem pe email linkul de Zoom.</p>
+        <p><strong>Marți, 20 octombrie, ora 19:00 · Online, pe Zoom</strong></p>
+      </div>
+
+      <div>
+        <!-- Înlocuiește YOUR_FORM_ID cu ID-ul formularului tău Formspree (vezi instrucțiunile) -->
+        <form id="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Înscriere nouă la masterclass-ul de marketing medical">
+          <div class="field">
+            <label for="nume">Nume și prenume</label>
+            <input id="nume" name="nume" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="specialitate">Specialitate</label>
+            <input id="specialitate" name="specialitate" type="text" placeholder="ex. ortopedie, dermatologie" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="telefon">Telefon</label>
+            <input id="telefon" name="telefon" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="field">
+            <label for="oras">Oraș</label>
+            <input id="oras" name="oras" type="text" autocomplete="address-level2" required>
+          </div>
+          <div class="field">
+            <label for="unde">Unde lucrezi</label>
+            <select id="unde" name="unde_lucreaza" required>
+              <option value="">Alege o variantă</option>
+              <option>Cabinet propriu</option>
+              <option>Clinică privată</option>
+              <option>Spital</option>
+              <option>Altele</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="intrebare">Ce ai vrea să afli la masterclass? <span class="opt">(opțional)</span></label>
+            <textarea id="intrebare" name="intrebare"></textarea>
+          </div>
+          <div class="consent">
+            <input id="gdpr" name="acord_gdpr" type="checkbox" value="da" required>
+            <label for="gdpr">Sunt de acord ca DIGITALUX să-mi folosească datele pentru a mă contacta în legătură cu acest masterclass. Detalii în <a href="https://digitalux.ro/politica-de-confidentialitate/" target="_blank" rel="noopener">politica de confidențialitate</a>.</label>
+          </div>
+          <p class="err" id="form-error" role="alert"></p>
+          <button class="btn" type="submit">Rezervă-mi locul</button>
+        </form>
+
+        <div class="done" id="form-done" tabindex="-1">
+          <h3>Locul tău e rezervat.</h3>
+          <p>Îți trimitem linkul de Zoom pe email. Dacă nu îl găsești, verifică și folderul Spam sau scrie-ne la office@digitalux.ro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="MedB. by DIGITALUX"><b>MedB.</b><small>BY DIGITALUX®</small></a>
+    <div><a href="https://www.digitalux.ro">www.digitalux.ro</a> &nbsp;|&nbsp; <a href="mailto:office@digitalux.ro">office@digitalux.ro</a> &nbsp;|&nbsp; <a href="tel:+40733393091">0733 393 091</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('signup-form');
+  var err = document.getElementById('form-error');
+  var section = document.getElementById('inscriere');
+  var done = document.getElementById('form-done');
+  var btn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    err.textContent = '';
+    var missing = Array.prototype.find.call(form.querySelectorAll('[required]'), function(el){
+      return el.type === 'checkbox' ? !el.checked : !el.value.trim();
+    });
+    if (missing){
+      err.textContent = missing.type === 'checkbox'
+        ? 'Bifează acordul de prelucrare a datelor ca să te putem contacta.'
+        : 'Completează câmpul „' + form.querySelector('label[for="' + missing.id + '"]').childNodes[0].textContent.trim() + '”.';
+      missing.focus();
+      return;
+    }
+    var email = form.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      err.textContent = 'Adresa de email nu pare corectă. Verifică-o și încearcă din nou.';
+      form.email.focus();
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Se trimite...';
+    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if (!r.ok) throw new Error();
+        section.classList.add('sent');
+        done.focus();
+      })
+      .catch(function(){
+        err.textContent = 'Înscrierea nu a putut fi trimisă. Încearcă din nou sau scrie-ne la office@digitalux.ro.';
+        btn.disabled = false;
+        btn.textContent = 'Rezervă-mi locul';
+      });
+  });
+})();
+</script>
+</body>
+</html>
